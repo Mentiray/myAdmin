@@ -14,4 +14,13 @@ export class AppComponent {
   	province : "福建",
   	city : "福州"
   };
+
+  //动态系统时间
+  public currentTime = new Date();
+  constructor(){
+  	window.setInterval(
+  		()=>{this.currentTime = new Date()},1000
+  	);
+  }
+  
 }
